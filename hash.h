@@ -22,9 +22,8 @@ struct MyHash {
 };
 
 template <typename string>   // хэшF
-int djb2Hash(string key0) {
+int djb2Hash(string key) {
     int hash = 5381;
-    char key[] = "key";
     for (char ch : key) {
         hash = ((hash << 5) + hash) + ch; /* hash * 33 + c */
     }
